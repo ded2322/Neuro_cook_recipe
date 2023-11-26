@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate</title>
+</head>
+<body>
+    <h1>Генератор рецептов</h1>
+    <h2>Работает крайне не стабильно</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сгенерировать рецепт">
+    </form>
+</body>
+</html>

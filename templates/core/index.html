@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+	<title>Рецепты</title>
+</head>
+<body>
+	<header>
+	<div class="logo"><a href="{% url 'index' %}"><img src="{% static 'img/logo.jpg'%}" alt="Изображение" class="profile-photo">	</a></div>
+
+		<div>
+			<h1>Блюда от нейросети</h1>
+			<nav>
+				<a href="{% url 'error' %}">Рецепты</a>
+				<a href="{% url 'error' %}">Новости кулинарии</a>
+				<a href="{% url 'generate'%}">Генератор рецептов</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="content">
+
+	<!-- Рецептики =) -->
+		
+			<!-- Идет перебор рецептов-->
+			{% for recipe in recipes %}
+			<section id="Recipe" >
+				<img src="{{recipe.image_post.url}}" alt="Изображение" class="img"/>
+				<a href="{% url 'recipe_post' id=recipe.id %}"><h2>{{recipe.name_recipe}}</h2></a>
+				<p class="description">{{recipe.preview|linebreaks}}</p>
+				<ul class="tegs">
+					<li class="teg">{{recipe.category}}</li>
+				</ul>
+			</section>
+			{% endfor %}
+
+	</div>
+<footer>
+		  <div class="footer-background"></div>
+		  <div class="footer-content">
+			<div class="links">
+			  <a href="{% url 'about'%}">О нас</a>
+			</div>
+		  </div>
+		</footer>
+</body>
+</html>

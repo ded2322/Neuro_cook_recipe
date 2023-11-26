@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <style>
+        body {
+            background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614412037_6-p-ovoshchi-na-temnom-fone-8.jpg');
+	        background-size: 100vw 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="{% url 'index'%}"><img src="{% static 'img/logo.jpg'%}" alt="Изображение" class="profile-photo">	</a></div>
+
+        <div>
+            <h1>{{recipe.name_recipe}}😁</h1>
+        </div>
+    </header>
+    <div class="recipes">
+        <div class="recipe">
+            <div class="resipe-img">
+                <img src="{{ recipe.image_post.url }}" alt="">
+            </div>
+            <div class="resipe-blok">
+                <h2>{{recipe.name_recipe}}</h2>
+                <p>{{recipe.text_post|linebreaks}}</p>
+            </div>
+        </div>
+    </div>
+
+<div class="coment-wrap">
+
+    <div class="new-comment">
+        <form method="post" action="">
+            {{ comment_form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Отправить"></p>
+        </form>
+    </div>
+
+  {% with comments.count as total_comments %}
+
+  <h2>Комментарии {{total_comments}}</h2>
+  <div class="comment-section">
+    <div class="comment-box">
+        {% for comment in comments %}
+      <h3>{{ comment.name_user }}</h3>
+      <p>{{ comment.text_comment}}</p>
+      {% empty %}
+      <p>Ни одного комментария еще нет =(.</p>
+      {% endfor %}
+    </div>
+    <!-- More comments go here-->
+  </div>
+  {% endwith %}
+
+</div>
+  <footer>
+        <div class="footer-background"></div>
+        <div class="footer-content">
+          <div class="links">
+            Neuro cook recipe 2023
+          </div>
+        </div>
+    </footer>
+</body>
+</html>

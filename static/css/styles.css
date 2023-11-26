@@ -1,0 +1,287 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	overflow-x: hidden;
+	background-attachment: fixed;
+}
+
+.profile-photo {
+	width: calc(1vw + 1vh * 15);
+	height: calc(1vw + 1vh  * 15);
+	object-fit: cover;
+	border: 3px solid #fff;
+	margin-left: 30%;
+}
+
+h1 {
+	width: 90vw;
+	text-align: center;
+}
+
+header {
+	display: flex;
+	background-color: #333;
+	color: #fff;
+	width: 100vw;
+	padding: 20px 0;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+nav a {
+	text-decoration: none;
+	color: #D3D3D3;
+	transition: color .4s;
+}
+
+nav a:hover {
+	color: #ff0000;
+}
+
+.content {
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	min-height: calc(100vh - 300px);
+	flex-wrap: wrap;
+	background-image: url('https://thumbs.dreamstime.com/b/%D0%B1%D0%B5%D0%B7%D1%88%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D1%81-%D0%B0-%D0%BE%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%D1%8F-36342899.jpg');
+}
+
+section {
+	width: 500px;
+	height: auto;
+	max-height: 560px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #D3D3D3;
+	border-radius: 25px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.content h1 {
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.content h2 {
+	font-size: 24px;
+	margin-top: 0;
+}
+
+.description {
+	margin: 10px;
+}
+
+.tegs {
+	display: flex;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: space-around;
+}
+
+.teg {
+	border: 3px solid #338;
+	border-radius: 50%;
+	padding: 8px;
+	transition: border .4s;
+	cursor: pointer;
+}
+
+.teg:hover {
+	border: 3px solid rgb(87, 87, 139);
+	background-color: rgb(87, 87, 139);
+	color: #f5f5f5;
+} 
+
+.line {
+	border-right: 1px solid black;
+	margin-right: 20px;
+	padding-right: 20px;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.links a {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.tegs {
+	display: flex;
+	list-style: none;
+}
+
+.img {
+	width: 300px;
+	height: 300px;
+}
+
+.blocktext {
+	margin-left: auto;
+	margin-right: auto;
+	width: 75em;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100vw;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Высота фона подвала */
+  background-color: #333;
+  z-index: -1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Высота подвала */
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links a {
+  display: block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.recipes {
+	display: flex;
+	min-height: calc(100vh - 348px);
+	justify-content: center;
+	padding: 3%;
+}
+
+.recipe {
+	display: flex;
+	width: 100%;
+	gap: 30px;
+	justify-content: center;
+}
+
+.resipe-blok {
+	background-color: rgba(0, 0, 0, 0.68);
+	color: #f5f5f5;
+	padding: 1.5%;
+	border-radius: 10% 0 10% 0;
+	width: 50%;
+}
+
+.resipe-img {
+	max-width: 500px;
+	max-height: 500px;
+}
+
+.resipe-img img  {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+}
+
+
+.resipe-blok h2{
+	text-align: center;
+	margin: 1%;
+}
+
+.comment {
+	width: 220px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding: 2%;
+	flex-direction: column;
+}
+
+.wc_comment {
+	overflow: hidden;
+	height: 54px;
+	overflow: hidden;
+}
+
+.coment-wrap {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.342);
+}
+
+.commented {
+	background-color: rgba(51, 123, 136, 0.542);
+	gap: 1%;
+}
+.comment-box {
+  margin-bottom: 20px; /* Отступ снизу для каждого комментария */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: auto; /* Выравнивание по центру */
+  margin-right: auto; /* Выравнивание по центру */
+}
+    .comment-box h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+    .comment-box p {
+      margin: 5px 0 0;
+    }
+    .sort-option select {
+      margin-bottom: 10px;
+    }
+	.new-comment {
+	
+	}
+    .new-comment input, .new-comment textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .new-comment button {
+      padding: 5px 10px;
+    }
