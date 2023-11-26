@@ -22,7 +22,7 @@
 Шаги для установки старта сайта
 
 ```
-git clone https://github.com/your-username/your-project-name.git](https://github.com/ded2322/Neuro_cook_recipe.git)
+git clone [https://github.com/ded2322/Neuro_cook_recipe.git](https://github.com/ded2322/Neuro_cook_recipe.git)
 cd Neuro_cook_recipe
 pip install -r requirements.txt 
 python manage.py runserver
