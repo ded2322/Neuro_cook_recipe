@@ -5,7 +5,7 @@
 ## Работа сайта и используемые технологии
 Используется версия Python 3.10
 Работает сайт на django, использует PostgreSQL как базу данных.
-Для генерации используется gpt4free source: https://github.com/xtekky/gpt4free
+Для генерации используется gpt4free, source: https://github.com/xtekky/gpt4free
 ## Демонстрация
 
 ![изображение](https://github.com/ded2322/Neuro_cook_recipe/assets/151318767/ac693134-f457-41f9-951b-15604efa8585)
